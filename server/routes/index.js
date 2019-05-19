@@ -8,16 +8,14 @@ const router = express.Router();
 
 // app const
 const app = express();
-<<<<<<< HEAD
 
-=======
 const language = require('@google-cloud/language');
 
 const client = new language.LanguageServiceClient();
 
 const retext = require('retext');
 const keywords = require('retext-keywords');
->>>>>>> master
+
 // setting local
 app.use(express.static('/home/faheem/Desktop/ruhacks/RUHack-NLP-Backend/server/public/html')); 
 
@@ -136,11 +134,9 @@ router.post('/imageUpload', upload.single("pic"), function (req, res, next) {
   var targetPath = path.join("", req.file.originalname);
   fs.rename(tempPath, targetPath, () => {
     getText(targetPath).then((value) => {
-<<<<<<< HEAD
       if (value == "ERROR"){
         fs.readFile(__dirname + "/html/error.html", "utf8", (err, text) => {
           res.send(text);
-=======
       summarize(value).then((returnValue) => {
         promiseGenerator(returnValue).then(function(returnValue) {
           clean_json(returnValue);
@@ -150,7 +146,6 @@ router.post('/imageUpload', upload.single("pic"), function (req, res, next) {
           });
         }, function() {
           console.log('error!');
->>>>>>> master
         });
       } else {
         summarize(value).then((returnValue) => {
