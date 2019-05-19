@@ -20,7 +20,7 @@ Our objective was to minimize the time that people spend reading documents, make
 ## Near Future
 Since, Nutt-Shell in early stages we would like to continue to further develop it after the hackathon and add features we could not at the RU-Hacks hackathon such as ease of navigation rather than links it would just be tooltips with definitions, and give a more tailored experience to the user by checking the depth of understanding about to topics in the given images.
 
-GROUP:
+## GROUP:
 - David: https://github.com/DavidM-Dev
 - Carvos: https://github.com/Han-Haosen/
 - Muhammad: https://github.com/M-Faheem-Khan
